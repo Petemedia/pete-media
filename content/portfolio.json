@@ -1,0 +1,62 @@
+{
+  "categories": [
+    "Weddings",
+    "Traditional Marriages",
+    "Pre-Wedding",
+    "Portraits",
+    "Family",
+    "Birthdays",
+    "Corporate Events",
+    "Church Programmes",
+    "Funeral & Memorial",
+    "Commercial",
+    "Cinematic Films",
+    "Live-Streaming Demos"
+  ],
+  "projects": [
+    {
+      "slug": "demo-1",
+      "title": "Demo placeholder — Weddings",
+      "category": "Weddings",
+      "demo": true,
+      "description": "This is not Pete Media work. It marks where an approved project will appear.",
+      "location": "",
+      "date": "",
+      "images": [],
+      "video": ""
+    },
+    {
+      "slug": "demo-2",
+      "title": "Demo placeholder — Traditional Marriages",
+      "category": "Traditional Marriages",
+      "demo": true,
+      "description": "This is not Pete Media work. It marks where an approved project will appear.",
+      "location": "",
+      "date": "",
+      "images": [],
+      "video": ""
+    },
+    {
+      "slug": "demo-3",
+      "title": "Demo placeholder — Portraits",
+      "category": "Portraits",
+      "demo": true,
+      "description": "This is not Pete Media work. It marks where an approved project will appear.",
+      "location": "",
+      "date": "",
+      "images": [],
+      "video": ""
+    },
+    {
+      "slug": "demo-4",
+      "title": "Demo placeholder — Corporate Events",
+      "category": "Corporate Events",
+      "demo": true,
+      "description": "This is not Pete Media work. It marks where an approved project will appear.",
+      "location": "",
+      "date": "",
+      "images": [],
+      "video": ""
+    }
+  ]
+}
