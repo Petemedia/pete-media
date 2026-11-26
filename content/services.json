@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "photography",
+    "title": "Photography",
+    "short": "Weddings, portraits, families, events, commercial work, retouching and print.",
+    "intro": "Considered coverage for the days and the people you want to remember, and clean, purposeful images for businesses.",
+    "items": [
+      "Wedding photography",
+      "Traditional marriage photography",
+      "Pre-wedding photography",
+      "Portrait and personal photography",
+      "Family photography",
+      "Birthday and anniversary photography",
+      "Church programmes and dedications",
+      "Funeral and memorial photography",
+      "Corporate and business photography",
+      "Outdoor and location photography",
+      "Commercial photography",
+      "Professional photo retouching",
+      "Image restoration and enhancement",
+      "Photo enlargement and framing",
+      "Photobooks and premium photo albums"
+    ]
+  },
+  {
+    "slug": "videography",
+    "title": "Videography & Film",
+    "short": "Wedding films, highlights, corporate video, documentary and editing.",
+    "intro": "Films built around real moments and clear storytelling, from ceremony coverage to branded content.",
+    "items": [
+      "Wedding cinematography",
+      "Traditional wedding films",
+      "Event videography",
+      "Cinematic highlights",
+      "Wedding trailers",
+      "Promotional videos",
+      "Corporate videos",
+      "Documentary production",
+      "Church and conference video coverage",
+      "Interviews and branded content",
+      "Social media video production",
+      "Video editing and post-production"
+    ]
+  },
+  {
+    "slug": "live-streaming",
+    "title": "Live Streaming & Broadcast",
+    "short": "Multi-camera streaming for weddings, churches, conferences and corporate events.",
+    "intro": "Let family, members and colleagues follow your event from wherever they are. Venue connectivity and technical needs are reviewed before any quotation.",
+    "items": [
+      "Wedding live streaming",
+      "Church programme live streaming",
+      "Conference and seminar broadcasting",
+      "Corporate event streaming",
+      "Multi-camera production",
+      "Remote audience viewing",
+      "Audio and video integration",
+      "Event recording and replay delivery"
+    ]
+  },
+  {
+    "slug": "connectivity",
+    "title": "Connectivity & Event Technology",
+    "short": "MTN 4G/5G router and Starlink equipment day-rental, and streaming internet support.",
+    "intro": "Temporary internet for events, projects and live broadcasts. Rental is subject to equipment availability; coverage and speed depend on the location and network.",
+    "items": [
+      "MTN 4G/5G router rental",
+      "Starlink internet equipment rental",
+      "Day-based equipment rental",
+      "Connectivity for events",
+      "Live-streaming internet support",
+      "Business and office internet support",
+      "Temporary access for projects and gatherings"
+    ]
+  },
+  {
+    "slug": "corporate",
+    "title": "Business & Corporate Solutions",
+    "short": "Coverage, film, streaming and connectivity for organisations.",
+    "intro": "One point of contact for the media side of your conference, launch, programme or campaign.",
+    "items": [
+      "Corporate and business photography",
+      "Corporate video and interviews",
+      "Conference and seminar coverage",
+      "Corporate event streaming",
+      "Commercial photography",
+      "Social media video production",
+      "Event connectivity support"
+    ]
+  }
+]
