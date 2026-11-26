@@ -1,175 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pete Media Fotography — professional photography, videography, event coverage, portraits, photo framing and internet equipment rental in Eket, Akwa Ibom, Nigeria. Creating Top-Notch Memories.">
-  <meta name="theme-color" content="#090909">
-  <meta property="og:title" content="Pete Media Fotography | Creating Top-Notch Memories">
-  <meta property="og:description" content="Professional photography, videography and event documentation in Eket, Akwa Ibom, Nigeria.">
-  <meta property="og:type" content="website">
-  <title>Pete Media Fotography | Creating Top-Notch Memories</title>
-  <style>
-    :root{--black:#090909;--panel:#121212;--gold:#c9a45c;--gold2:#e8d3a1;--white:#f6f3ed;--muted:#b8b2a6;--line:rgba(201,164,92,.25)}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .wrap{width:min(1140px,92%);margin:auto}
-    .topbar{border-bottom:1px solid var(--line);font-size:.82rem;color:var(--muted);padding:9px 0}
-    .topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    header{position:sticky;top:0;z-index:10;background:rgba(9,9,9,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{font-family:Georgia,serif;font-size:1.25rem;font-weight:bold;letter-spacing:.03em}
-    .brand span{color:var(--gold)}
-    .links{display:flex;align-items:center;gap:22px;font-size:.9rem;color:#e7e0d4}
-    .links a:hover{color:var(--gold2)}
-    .menu{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 12px;font-size:1.2rem}
-    .btn{display:inline-block;padding:13px 20px;background:var(--gold);color:#100e09;font-weight:bold;border:1px solid var(--gold);transition:.2s}
-    .btn:hover{background:var(--gold2);border-color:var(--gold2)}
-    .btn.outline{background:transparent;color:var(--gold2)}
-    .hero{min-height:650px;display:grid;align-items:center;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.62),rgba(0,0,0,.25)),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85') center/cover}
-    .hero-content{max-width:720px;padding:95px 0}
-    .eyebrow{color:var(--gold2);letter-spacing:.22em;text-transform:uppercase;font-size:.76rem;font-weight:bold}
-    h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.15}
-    h1{font-size:clamp(2.8rem,7vw,5.7rem);margin:18px 0}
-    h1 em{font-style:normal;color:var(--gold2)}
-    .hero p{max-width:580px;color:#ddd6ca;font-size:1.08rem}
-    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
-    section{padding:86px 0}
-    .section-head{max-width:690px;margin-bottom:36px}
-    .section-head h2{font-size:clamp(2rem,4vw,3.2rem);margin:10px 0}
-    .section-head p,.muted{color:var(--muted)}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-    .about-photo{height:480px;object-fit:cover;width:100%;border:1px solid var(--line)}
-    .gold-rule{width:68px;height:2px;background:var(--gold);margin:20px 0}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--panel);border:1px solid var(--line);padding:28px}
-    .card .number{color:var(--gold);font-family:Georgia,serif;font-size:1.6rem}
-    .card h3{font-size:1.45rem;margin:12px 0}
-    .card p{color:var(--muted);font-size:.95rem}
-    .dark-section{background:#10100f}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .gallery img{height:290px;width:100%;object-fit:cover;border:1px solid var(--line)}
-    .note{font-size:.85rem;color:var(--muted);margin-top:14px}
-    .feature{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-    .feature img{height:380px;width:100%;object-fit:cover}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
-    .contact-box{background:var(--panel);border:1px solid var(--line);padding:30px}
-    .contact-box p{color:var(--muted)}
-    .contact-links{display:grid;gap:13px;margin-top:20px}
-    .contact-links a{color:var(--gold2);overflow-wrap:anywhere}
-    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.85rem}
-    footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:20;background:#1f9d55;color:#fff;padding:13px 17px;border-radius:30px;font-weight:bold;box-shadow:0 5px 25px #0008}
-    @media(max-width:800px){.links{display:none;position:absolute;top:76px;left:0;right:0;background:#10100f;padding:22px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.links.open{display:flex}.menu{display:block}.nav .btn{display:none}.about-grid,.feature,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.hero{min-height:590px}}
-    @media(max-width:520px){section{padding:65px 0}.cards,.gallery{grid-template-columns:1fr}.gallery img{height:260px}.about-photo{height:340px}.hero-content{padding:75px 0}.topbar .wrap{font-size:.75rem}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Pete Media Fotography — professional photography, videography, portraits and event coverage in Eket, Akwa Ibom, Nigeria.">
+<meta name="theme-color" content="#10100f">
+<title>Pete Media Fotography | Creating Top-Notch Memories</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="topbar"><div class="wrap"><span>Eket, Akwa Ibom State, Nigeria</span><span>Appointments • Home service • Agreed locations</span></div></div>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#home">PETE MEDIA <span>FOTOGRAPHY</span></a>
-      <button class="menu" id="menuButton" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="links" id="navLinks">
-        <a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#internet">Internet Rental</a><a href="#contact">Contact</a>
-      </nav>
-      <a class="btn" href="https://wa.me/2348138859513?text=Hello%20Pete%20Media%20Fotography%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">Enquire on WhatsApp</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="wrap hero-content">
-        <div class="eyebrow">Photography • Videography • Visual Storytelling</div>
-        <h1>Creating <em>Top-Notch</em> Memories.</h1>
-        <p>Professional photography, videography and event documentation for the moments, people and stories worth remembering.</p>
-        <div class="actions">
-          <a class="btn" href="https://wa.me/2348138859513?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener">Book an Enquiry</a>
-          <a class="btn outline" href="#portfolio">Explore Portfolio</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="wrap about-grid">
-        <div>
-          <div class="eyebrow">The Pete Media standard</div>
-          <h2>Visuals with purpose. Memories with meaning.</h2>
-          <div class="gold-rule"></div>
-          <p class="muted">Pete Media Fotography is a photography and visual media brand based in Eket, Akwa Ibom State, Nigeria. We document people, celebrations and important milestones through thoughtful photography and videography.</p>
-          <p class="muted">From portraits and family sessions to weddings and corporate events, our focus is on dependable service and images worth keeping.</p>
-          <a class="btn" href="#contact">Talk to the team</a>
-        </div>
-        <img class="about-photo" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1100&q=85" alt="Wedding photography scene">
-      </div>
-    </section>
-
-    <section class="dark-section" id="services">
-      <div class="wrap">
-        <div class="section-head"><div class="eyebrow">What we do</div><h2>Services</h2><p>Photography and visual services for personal, family, social and professional occasions.</p></div>
-        <div class="cards">
-          <article class="card"><div class="number">01</div><h3>Portrait Photography</h3><p>Personal portraits, studio sessions, outdoor shoots and professional retouching.</p></article>
-          <article class="card"><div class="number">02</div><h3>Family & Pre-wedding</h3><p>Family portraits, couple sessions and pre-wedding photography.</p></article>
-          <article class="card"><div class="number">03</div><h3>Wedding & Events</h3><p>Photography and videography for weddings, traditional marriages, dedications, church and corporate events.</p></article>
-          <article class="card"><div class="number">04</div><h3>Video Production</h3><p>Event films, highlight videos and visual documentation for special occasions.</p></article>
-          <article class="card"><div class="number">05</div><h3>Photo Frames & Enlargements</h3><p>Printed photo enlargements and framing options to display meaningful memories.</p></article>
-          <article class="card"><div class="number">06</div><h3>Photo Retouching</h3><p>Careful image enhancement and retouching for portraits and selected photography projects.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio">
-      <div class="wrap">
-        <div class="section-head"><div class="eyebrow">Selected visual direction</div><h2>Portfolio</h2><p>A preview layout for the Pete Media portfolio. Replace these sample photographs with your own approved work before promoting the website as a client gallery.</p></div>
-        <div class="gallery">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85" alt="Sample wedding scene">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85" alt="Sample portrait">
-          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85" alt="Sample wedding celebration">
-          <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=900&q=85" alt="Sample couple photography">
-          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85" alt="Sample event photography">
-          <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=85" alt="Sample wedding details">
-        </div>
-        <p class="note">Portfolio images shown here are illustrative third-party sample images, not representations of Pete Media client work. Replace them with photographs you own or have permission to publish.</p>
-      </div>
-    </section>
-
-    <section class="dark-section" id="internet">
-      <div class="wrap feature">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1100&q=85" alt="Technology equipment">
-        <div><div class="eyebrow">Connectivity equipment rental</div><h2>Internet equipment for work and events.</h2><p class="muted">Ask about day-rental of MTN 4G/5G router and Starlink internet equipment for live streaming, business, office work, events and other connectivity needs.</p><a class="btn" href="https://wa.me/2348138859513?text=Hello%2C%20I%20want%20to%20enquire%20about%20internet%20equipment%20rental." target="_blank" rel="noopener">Ask about rental</a></div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <div class="section-head"><div class="eyebrow">Start a conversation</div><h2>Contact Pete Media Fotography</h2><p>Send an enquiry about your session, event, photo frames or equipment rental.</p></div>
-        <div class="contact-grid">
-          <div class="contact-box"><h3>Get in touch</h3><p>Based in Eket, Akwa Ibom State, Nigeria. Studio visits are by appointment. Home service and agreed locations can be discussed.</p>
-            <div class="contact-links">
-              <a href="tel:+2348138859513">+234 813 885 9513</a>
-              <a href="tel:+2349026048462">+234 902 604 8462</a>
-              <a href="https://instagram.com/pete_media" target="_blank" rel="noopener">Instagram: @pete_media</a>
-              <a href="https://facebook.com/petemedia.ng" target="_blank" rel="noopener">Facebook: Pete Media Fotography</a>
-              <a href="https://www.google.com/maps/search/?api=1&query=Eket%2C%20Akwa%20Ibom%2C%20Nigeria" target="_blank" rel="noopener">Find Eket on Google Maps</a>
-            </div>
-          </div>
-          <div class="contact-box"><h3>Booking information</h3><p>Share your event type, preferred date, location and the service you need so the team can prepare an appropriate quotation.</p><p>Bookings are confirmed after payment is received and verified. Dates are not reserved by enquiry alone.</p><a class="btn" href="https://wa.me/2348138859513?text=Hello%20Pete%20Media%20Fotography.%0AService%20needed%3A%0APreferred%20date%3A%0ALocation%3A%0ADetails%3A" target="_blank" rel="noopener">Send booking details</a></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="wrap"><span>© <span id="year"></span> Pete Media Fotography. All rights reserved.</span><span>Creating Top-Notch Memories.</span></div></footer>
-  <a class="whatsapp-float" href="https://wa.me/2348138859513?text=Hello%20Pete%20Media%20Fotography" target="_blank" rel="noopener" aria-label="Chat with Pete Media on WhatsApp">WhatsApp</a>
-  <script>
-    const menuButton=document.getElementById('menuButton');
-    const navLinks=document.getElementById('navLinks');
-    menuButton.addEventListener('click',()=>{const opened=navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(opened));});
-    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuButton.setAttribute('aria-expanded','false');}));
-    document.getElementById('year').textContent=new Date().getFullYear();
-  </script>
-</body>
-</html>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="monogram">PM</span><span>PETE MEDIA<small>FOTOGRAPHY</small></span></a>
+  <nav><a href="#work">Portfolio</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <a class="nav-cta" href="https://wa.me/2348138859513?text=Hello%20Pete%20Media%2C%20I%20would%20like%20to%20make%20an%20enquiry.">Enquire now</a>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <p class="eyebrow">EKET · AKWA IBOM · NIGERIA</p>
+    <h1>Every frame.<br><em>A lasting legacy.</em></h1>
+    <p class="lead">Professional photography and visual storytelling for weddings, people, families and meaningful occasions.</p>
+    <div class="actions"><a class="button gold" href="#work">Explore our work</a><a class="button outline" href="https://wa.me/2348138859513?text=Hello%20Pete%20Media%2C%20please%20send%20me%20your%20service%20details.">Speak to our team</a></div>
+  </div>
+  <div class="hero-art"><div class="hero-frame"><img src="assets/photos/hero.jpg" alt="Pete Media signature photograph"><span>YOUR SIGNATURE IMAGE</span></div></div>
+</section>
+<section class="trust"><span>PHOTOGRAPHY</span><i>✦</i><span>VIDEOGRAPHY</span><i>✦</i><span>PORTRAITS</span><i>✦</i><span>EVENT STORIES</span></section>
+<section class="section" id="work">
+  <div class="section-head"><div><p class="eyebrow">SELECTED STORIES</p><h2>Work that speaks.</h2></div><p>Replace every sample tile with a real, approved Pete Media image or film still before launch.</p></div>
+  <div class="gallery">
+    <figure class="wide"><img src="assets/photos/portfolio-01.jpg" alt="Wedding photography portfolio image"><figcaption>Weddings & celebrations</figcaption></figure>
+    <figure><img src="assets/photos/portfolio-02.jpg" alt="Portrait photography portfolio image"><figcaption>Portraits</figcaption></figure>
+    <figure><img src="assets/photos/portfolio-03.jpg" alt="Family photography portfolio image"><figcaption>Family stories</figcaption></figure>
+    <figure><img src="assets/photos/portfolio-04.jpg" alt="Traditional marriage photography portfolio image"><figcaption>Traditional ceremonies</figcaption></figure>
+    <figure class="wide"><img src="assets/photos/portfolio-05.jpg" alt="Event photography portfolio image"><figcaption>Events & corporate</figcaption></figure>
+  </div>
+  <div class="film-panel"><div><p class="eyebrow">MOTION PICTURES</p><h3>Stories in motion.</h3><p>Add one or two short, client-approved showreels. Host large films on a video platform and embed the link rather than uploading huge files to GitHub.</p></div><video controls preload="metadata" poster="assets/photos/video-poster.jpg"><source src="assets/videos/showreel.mp4" type="video/mp4">Your browser does not support video.</video></div>
+</section>
+<section class="section services" id="services">
+  <p class="eyebrow">WHAT WE CREATE</p><h2>Visual experiences, thoughtfully made.</h2>
+  <div class="service-grid">
+    <article><b>01</b><h3>Wedding photography</h3><p>Wedding days, traditional marriages, engagements and celebrations.</p></article>
+    <article><b>02</b><h3>Portrait sessions</h3><p>Personal portraits, outdoor sessions, family photographs and creative concepts.</p></article>
+    <article><b>03</b><h3>Event coverage</h3><p>Church, corporate, social and milestone events.</p></article>
+    <article><b>04</b><h3>Films & video</h3><p>Event films, highlight edits and carefully crafted visual stories.</p></article>
+    <article><b>05</b><h3>Prints & frames</h3><p>Photographic enlargements and framing. Request a current quotation.</p></article>
+    <article><b>06</b><h3>Connectivity rental</h3><p>Enquire about available MTN router and Starlink equipment day-rental.</p></article>
+  </div>
+</section>
+<section class="about" id="about"><div><p class="eyebrow">THE PETE MEDIA STANDARD</p><h2>Creating Top-Notch Memories.</h2></div><p>Pete Media Fotography is a photography and visual-content brand based in Eket, Akwa Ibom State, Nigeria. Our focus is thoughtful coverage, dependable communication and finished images that clients can return to for years. Studio visits are by appointment; home service and agreed locations can be discussed.</p></section>
+<section class="section process"><p class="eyebrow">A CLEAR CLIENT JOURNEY</p><h2>From enquiry to delivery.</h2><div class="steps"><div><b>01</b><h3>Tell us the plan</h3><p>Share the occasion, date, location and the coverage you need.</p></div><div><b>02</b><h3>Receive a quotation</h3><p>We confirm the scope, package, travel needs and exact price.</p></div><div><b>03</b><h3>Confirm your booking</h3><p>A booking is confirmed only after the required payment is verified. Dates are not held without payment.</p></div><div><b>04</b><h3>Enjoy your memories</h3><p>We cover the agreed work and deliver according to the confirmed arrangement.</p></div></div></section>
+<section class="contact" id="contact"><div><p class="eyebrow">LET'S PLAN YOUR NEXT STORY</p><h2>Make your enquiry.</h2><p>Tell us what you are planning. A team member will follow up with the details needed for a quotation.</p></div><div class="contact-card"><p><small>CALL / WHATSAPP</small><strong>0813 885 9513</strong><strong>0902 604 8462</strong></p><p><small>STUDIO</small><strong>4B Nnama Street, Eket, Akwa Ibom</strong><span>Appointments only · No walk-ins</span></p><p><small>ONLINE</small><a href="https://instagram.com/pete_media">Instagram @pete_media</a><a href="https://facebook.com/petemedia.ng">Facebook /petemedia.ng</a></p><a class="button gold full" href="https://wa.me/2348138859513?text=Hello%20Pete%20Media%2C%20I%20would%20like%20to%20make%20an%20enquiry.">Start a WhatsApp enquiry</a></div></section>
+</main>
+<footer><a class="brand" href="#home"><span class="monogram">PM</span><span>PETE MEDIA<small>FOTOGRAPHY</small></span></a><p>Creating Top-Notch Memories.</p><small>© <span id="year"></span> Pete Media Fotography. All rights reserved.</small></footer>
+<a class="float-wa" href="https://wa.me/2348138859513?text=Hello%20Pete%20Media%2C%20I%20need%20some%20information." aria-label="Chat with Pete Media on WhatsApp">WhatsApp</a>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
